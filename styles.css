@@ -1,0 +1,57 @@
+:root {
+  color-scheme: light;
+  --ink: #162a2b;
+  --muted: #647475;
+  --cream: #f5f2ea;
+  --card: #fffefa;
+  --green: #1f5c4b;
+  --mint: #dcebe4;
+  --line: #e5e1d8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+a { color: var(--green); }
+
+.shell {
+  width: min(920px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 64px 0 36px;
+}
+
+.hero { max-width: 680px; margin-bottom: 36px; }
+.eyebrow { margin: 0 0 10px; color: var(--green); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.16em; }
+h1 { margin: 0; font-size: clamp(2.3rem, 7vw, 4.8rem); line-height: 1.04; letter-spacing: -0.045em; }
+.lede { max-width: 620px; color: var(--muted); font-size: 1.15rem; }
+
+.card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.card { display: flex; min-height: 320px; flex-direction: column; padding: 28px; border: 1px solid var(--line); border-radius: 24px; background: var(--card); }
+.card-icon { display: grid; width: 42px; height: 42px; margin: 0; place-items: center; border-radius: 14px; background: var(--mint); color: var(--green); font-weight: 900; }
+.card h2 { margin: 22px 0 4px; font-size: 1.45rem; }
+.card p:not(.card-icon) { color: var(--muted); }
+.actions { display: flex; margin-top: auto; flex-direction: column; align-items: flex-start; gap: 14px; }
+.button { display: inline-block; margin-top: auto; padding: 11px 16px; border-radius: 12px; background: var(--green); color: white; font-weight: 750; text-decoration: none; }
+.actions .button { margin-top: 0; }
+.text-link { font-weight: 700; text-underline-offset: 3px; }
+
+.policy { max-width: 760px; }
+.policy nav { margin-bottom: 38px; }
+.policy h1 { font-size: clamp(2.25rem, 7vw, 4rem); }
+.policy h2 { margin: 38px 0 8px; font-size: 1.35rem; }
+.policy p, .policy li { color: #3f5050; }
+.effective { color: var(--muted); }
+footer { margin-top: 52px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.92rem; }
+
+@media (max-width: 680px) {
+  .shell { padding-top: 38px; }
+  .card-grid { grid-template-columns: 1fr; }
+  .card { min-height: 280px; }
+}
