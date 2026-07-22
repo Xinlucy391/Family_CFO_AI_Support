@@ -1,0 +1,66 @@
+name: App problem
+description: Report a reproducible problem in Family CFO AI
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Family CFO AI. This is a public issue.
+
+        **Do not attach backup files or include account numbers, transaction details, balances, names, email addresses, or other sensitive information.** For a private or privacy-related request, email xinheming22@gmail.com instead.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Android
+        - iPhone / iPad
+        - Web
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      placeholder: "For example: 1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and OS version
+      placeholder: "For example: Samsung Galaxy S24, Android 16"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use invented sample values instead of real financial information.
+      placeholder: |
+        1. Open…
+        2. Tap…
+        3. Observe…
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I removed all personal and financial information and did not attach an encrypted backup.
+          required: true
